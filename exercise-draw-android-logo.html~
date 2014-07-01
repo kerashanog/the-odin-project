@@ -130,7 +130,7 @@ right:45px;
 <div class="android">
 	<div class="head">
 		<div class='ear_l'></div>
-		<div class='ear_r'></div>
+		<div class='ear_t'></div>
 		<div class='eye_l'></div>
 		<div class='eye_r'></div>
 	</div>
