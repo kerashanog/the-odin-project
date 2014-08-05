@@ -38,5 +38,8 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-# Use Paperclip
+# Use Paperclip attach something
 gem 'paperclip'
+
+# Use Sorcery for authentication
+gem 'sorcery'

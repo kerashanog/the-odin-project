@@ -16,10 +16,12 @@
 <br/>
 <div id="bottom_nav">
 <%= link_to "<< Back to Articles List", :root %>
+<% if logged_in? %>
 <span> | </span>
 <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"} %>
 <span> | </span>
 <%= link_to "Edit", edit_article_path(@article) %>
+<% end %>
 </div>
 <br/>
 <br/>

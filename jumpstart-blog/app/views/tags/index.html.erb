@@ -4,7 +4,7 @@
     <% @tags.each do |tag| %>
     <tr>
         <td><%= link_to tag.name,  tag_path(tag) %></td>
-        <td><%= link_to "[Delete]", tag_path(tag), method: :delete %></td>
+        <% if logged_in? %><td><%= link_to "[Delete]", tag_path(tag), method: :delete %></td><% end %>
     </tr>
     <% end %>
 </table>

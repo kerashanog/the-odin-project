@@ -1,5 +1,5 @@
 <div>
-    <h5>Comment by <%= comment.author_name %></h5>
+    <h5>Comment by <%= comment.author_name %><span style="margin-left:20px;"><%= link_to '[delete]', article_path(@comment.article_id), data: {confirm: "It doesn't work, Sorry"} %><span></h5>
     <p>Posted <%= distance_of_time_in_words(Time.now, comment.created_at) %> ago</p>
     <p class="comment"><%= comment.body %></p>
 </div>
