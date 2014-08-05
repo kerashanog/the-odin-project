@@ -1,5 +1,5 @@
 <h1><%= @article.title %></h1>
-<%= link_to "All Tags", @tags, class: "new_article" %>
+<%= link_to "All Tags", tags_path, class: "new_article" %>
 <p>
     Tags:
     <% @article.tags.each do |tag| %>
@@ -7,6 +7,7 @@
     , 
     <% end %>
 </p>
+<p><%= image_tag @article.image.url %></p>
 <p><%= @article.body %></p>
 <br/>
 <br/>
