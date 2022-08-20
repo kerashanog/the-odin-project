@@ -42,8 +42,8 @@ jobs:
                 -d '{ "chat_id": "${{ secrets.TELEGRAM_GROUP }}", 
                       "parse_mode": "markdown", 
                       "text": 
-                      "🎉 **`${{ github.actor }}`** created a Pull Request 🍻 
-                      Repository: ${{ github.repository }}
+                      "🎉 **`${{ github.actor }}`** created a Pull Request 🍻\n 
+                      Repository: ${{ github.repository }}\n 
                       http://example.com/pull/xx"
                     }'
           
