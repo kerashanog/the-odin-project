@@ -39,7 +39,12 @@ jobs:
         run: |
           curl  -X POST 'https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT }}/sendMessage' \
                 -H 'Content-Type: application/json' \
-                -d '{ "chat_id": "${{ secrets.TELEGRAM_GROUP }}", "parse_mode": "markdown", "text": "🎉 **`${{ github.actor }}`** created a Pull Request 🍻 Repository: abc.xyz http://example.com/pull/xx"}'
+                -d '{ "chat_id": "${{ secrets.TELEGRAM_GROUP }}", 
+                      "parse_mode": "markdown", 
+                      "text": "🎉 **`${{ github.actor }}`** created a Pull Request 🍻 
+                              Repository: ${{ github.repository }} 
+                              http://example.com/pull/xx"
+                    }'
           
           
           
