@@ -37,13 +37,7 @@ jobs:
           
       - name: Test telegram bot
         run: |
-          curl  -X POST 'https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT }}/sendMessage' \
-                -h 'Content-Type: application/json'  \
-                -d '{       \
-                    "chat_id": "-739053985",  \ 
-                    "parse_mode": "markdown", \
-                    "text": "🎉 **`kerashanog`** created a Pull Request 🍻 Repository: abc.xyz http://example.com/pull/xx"  \
-                  }'
+          curl  -X POST 'https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT }}/sendMessage' -h 'Content-Type: application/json' -d '{ "chat_id": "${{ secrets.TELEGRAM_GROUP }}", "parse_mode": "markdown", "text": "🎉 **`kerashanog`** created a Pull Request 🍻 Repository: abc.xyz http://example.com/pull/xx"}'
           
           
           
